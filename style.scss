@@ -1,0 +1,56 @@
+$blue: hsl(223, 87%, 63%);
+$paleBlue: hsl(223, 100%, 88%);
+$lightRed: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$darkBlue: hsl(209, 33%, 12%);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  .logo {
+    width: 25%;
+    margin-bottom: 3rem;
+  }
+  .heading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $gray;
+    margin-bottom: 1rem;
+    .bold-heading {
+      font-weight: 700;
+      color: $darkBlue;
+    }
+  }
+  .text {
+    font-size: 0.775rem;
+    color: $darkBlue;
+    font-weight: 300;
+  }
+}
+
+.image {
+  width: 100%;
+}

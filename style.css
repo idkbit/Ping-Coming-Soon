@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+}
+
+.intro .logo {
+  width: 25%;
+  margin-bottom: 3rem;
+}
+
+.intro .heading {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #969696;
+  margin-bottom: 1rem;
+}
+
+.intro .heading .bold-heading {
+  font-weight: 700;
+  color: #151f29;
+}
+
+.intro .text {
+  font-size: 0.775rem;
+  color: #151f29;
+  font-weight: 300;
+}
+
+.image {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
