@@ -79,6 +79,21 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  position: relative;
+}
+
+.intro .form .warning-text {
+  display: none;
+}
+
+.intro .form.warning input {
+  border-color: #ff5263;
+}
+
+.intro .form.warning .warning-text {
+  display: block;
+  color: #ff5263;
+  margin: 1rem auto;
 }
 
 .intro .form input,
@@ -200,6 +215,29 @@ footer .copyright {
         -ms-flex-pack: center;
             justify-content: center;
     margin-bottom: 5rem;
+  }
+  .intro .form.warning {
+    display: -ms-grid;
+    display: grid;
+    width: 50%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .intro .form.warning .warning-text {
+    margin: 0.5rem 0 0 0.5rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .intro .form.warning button {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
   }
   .intro .form input {
     margin-bottom: 0;
