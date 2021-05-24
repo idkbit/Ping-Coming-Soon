@@ -47,8 +47,6 @@
 .intro .logo {
   width: 25%;
   margin-bottom: 3rem;
-  -webkit-animation: fromTop 0.5s forwards;
-          animation: fromTop 0.5s forwards;
 }
 
 .intro .heading {
@@ -56,8 +54,6 @@
   font-weight: 300;
   color: #969696;
   margin-bottom: 1rem;
-  -webkit-animation: fromRight 0.5s forwards;
-          animation: fromRight 0.5s forwards;
 }
 
 .intro .heading .bold-heading {
@@ -69,8 +65,6 @@
   font-size: 0.775rem;
   color: #151f29;
   margin-bottom: 1.5rem;
-  -webkit-animation: fromRight 1s forwards;
-          animation: fromRight 1s forwards;
 }
 
 .intro .form {
@@ -96,34 +90,33 @@
 .intro .form input {
   margin-bottom: 0.5rem;
   border: 1px solid #c2d3ff;
-  -webkit-animation: fromLeft 0.5s forwards;
-          animation: fromLeft 0.5s forwards;
 }
 
-.intro .form input::-webkit-input-placeholder {
-  color: #c2d3ff;
-}
-
-.intro .form input:-ms-input-placeholder {
-  color: #c2d3ff;
-}
-
-.intro .form input::-ms-input-placeholder {
-  color: #c2d3ff;
-}
-
-.intro .form input::placeholder {
-  color: #c2d3ff;
+.intro .form input:focus {
+  outline: 1px solid transparent;
+  border-color: #4f7df3;
 }
 
 .intro .form button {
   border: 1px solid transparent;
+  cursor: pointer;
   background-color: #4f7df3;
   color: #fff;
   -webkit-box-shadow: 0 5px 10px #7ea0f6;
           box-shadow: 0 5px 10px #7ea0f6;
-  -webkit-animation: fromLeft 0.8s forwards;
-          animation: fromLeft 0.8s forwards;
+  outline: 1px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.intro .form button:hover {
+  background-color: rgba(79, 125, 243, 0.8);
+}
+
+.intro .form button:focus {
+  background-color: #fff;
+  color: #4f7df3;
+  border-color: #4f7df3;
 }
 
 .image {
@@ -183,69 +176,45 @@ footer .social-links a:hover {
   color: #fff;
 }
 
-@-webkit-keyframes fromLeft {
-  from {
-    -webkit-transform: translateX(-114%);
-            transform: translateX(-114%);
-  }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
+footer .copyright {
+  color: #969696;
 }
 
-@keyframes fromLeft {
-  from {
-    -webkit-transform: translateX(-114%);
-            transform: translateX(-114%);
+@media screen and (min-width: 53.125em) {
+  .intro .logo {
+    width: 8%;
+    margin-top: 5rem;
   }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+  .intro .heading {
+    font-size: 3rem;
   }
-}
-
-@-webkit-keyframes fromRight {
-  from {
-    -webkit-transform: translateX(330%);
-            transform: translateX(330%);
+  .intro .text {
+    font-size: 1rem;
   }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+  .intro .form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 5rem;
   }
-}
-
-@keyframes fromRight {
-  from {
-    -webkit-transform: translateX(330%);
-            transform: translateX(330%);
+  .intro .form input {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    width: 20rem;
   }
-  to {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+  .intro .form button {
+    width: 10rem;
   }
-}
-
-@-webkit-keyframes fromTop {
-  from {
-    -webkit-transform: translateY(-440%);
-            transform: translateY(-440%);
+  .image {
+    width: 45%;
+    margin-bottom: 3rem;
   }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-}
-
-@keyframes fromTop {
-  from {
-    -webkit-transform: translateY(-440%);
-            transform: translateY(-440%);
-  }
-  to {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+  footer .social-links {
+    width: 15%;
   }
 }
 /*# sourceMappingURL=style.css.map */
