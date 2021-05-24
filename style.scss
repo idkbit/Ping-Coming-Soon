@@ -20,7 +20,8 @@ $darkBlue: hsl(209, 33%, 12%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  justify-content: space-evenly;
+  width: 80%;
   margin: 0 auto;
   align-items: center;
 }
@@ -29,16 +30,18 @@ $darkBlue: hsl(209, 33%, 12%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5rem;
+  width: 100%;
   .logo {
     width: 25%;
     margin-bottom: 3rem;
+    animation: fromTop 0.5s forwards;
   }
   .heading {
     font-size: 1.2rem;
     font-weight: 300;
     color: $gray;
     margin-bottom: 1rem;
+    animation: fromRight 0.5s forwards;
     .bold-heading {
       font-weight: 700;
       color: $darkBlue;
@@ -47,10 +50,99 @@ $darkBlue: hsl(209, 33%, 12%);
   .text {
     font-size: 0.775rem;
     color: $darkBlue;
-    font-weight: 300;
+    margin-bottom: 1.5rem;
+    animation: fromRight 1s forwards;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    input,
+    button {
+      border-radius: 30px;
+      padding: 0.8rem 1.5rem;
+    }
+    input {
+      margin-bottom: 0.5rem;
+      border: 1px solid $paleBlue;
+      animation: fromLeft 0.5s forwards;
+    }
+    input::placeholder {
+      color: $paleBlue;
+    }
+    button {
+      border: 1px solid transparent;
+      background-color: $blue;
+      color: #fff;
+      box-shadow: 0 5px 10px lighten($color: $blue, $amount: 10%);
+      animation: fromLeft 0.8s forwards;
+    }
   }
 }
 
 .image {
   width: 100%;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .social-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    a {
+      color: $blue;
+      border-radius: 50%;
+      border: 1px solid $paleBlue;
+      padding: 1rem;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.5s;
+      outline: 1px solid transparent;
+    }
+    a:focus,
+    a:hover {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translateX(-114%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(330%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fromTop {
+  from {
+    transform: translateY(-440%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@media screen and (min-width: 53.125em) {
 }
