@@ -85,6 +85,11 @@ $darkBlue: hsl(209, 33%, 12%);
       width: 100%;
       border: 1px solid $paleBlue;
       margin-bottom: 0.5rem;
+      color: $darkBlue;
+      &:focus {
+        outline: 1px solid transparent;
+        border-color: $blue;
+      }
       &::placeholder {
         color: $paleBlue;
       }
@@ -96,6 +101,12 @@ $darkBlue: hsl(209, 33%, 12%);
       color: #fff;
       font-size: 0.7rem;
       transition: 0.5;
+      &:focus {
+        outline: 1px solid transparent;
+        border-color: $paleBlue;
+        background-color: rgba($blue, 0.8);
+        color: #fff;
+      }
       &:hover {
         background-color: rgba($blue, 0.8);
       }
@@ -150,6 +161,41 @@ footer {
 }
 
 @media screen and (min-width: 50em) {
+  .wrapper {
+    padding: 5rem 25rem 2rem;
+  }
+  .content {
+    .logo {
+      width: 7%;
+    }
+    .heading {
+      font-size: 2.5rem;
+    }
+    .text {
+      font-size: 1.2rem;
+    }
+    .form {
+      flex-direction: row;
+      justify-content: center;
+      &.warning {
+        .warning-text {
+          margin-left: 0;
+          margin-bottom: 0;
+        }
+      }
+      .warning-text {
+        height: auto;
+      }
+      input {
+        width: 20rem;
+        margin-right: 0.5rem;
+      }
+      button {
+        width: 10rem;
+        height: 2.6rem;
+      }
+    }
+  }
   footer {
     .social-links {
       width: 13rem;
